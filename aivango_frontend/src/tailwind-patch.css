@@ -1,0 +1,110 @@
+.max-w-4xl{max-width:56rem;}
+.sticky{position:sticky;}
+.top-8{top:2rem;}
+.aspect-square{aspect-ratio:1/1;}
+.pb-6{padding-bottom:1.5rem;}
+.mt-2{margin-top:.5rem;}
+.bg-red-600{background-color:#dc2626;}
+.border-red-600{border-color:#dc2626;}
+.hover\:bg-red-700:hover{background-color:#b91c1c;}
+
+/*
+  В проекте утилиты Tailwind частично "зафиксированы" в src/index.css,
+  поэтому для новых классов добавляем патчи вручную.
+  Иначе классы вроде bg-amber-600 отсутствуют, и кнопки выглядят белыми.
+*/
+
+/* blue */
+.bg-blue-700{background-color:#1d4ed8;}
+.hover\:bg-blue-700:hover{background-color:#1d4ed8;}
+
+/* amber (sponsor) */
+.bg-amber-100{background-color:#fef3c7;}
+.bg-amber-300{background-color:#fcd34d;}
+.bg-amber-600{background-color:#d97706;}
+.hover\:bg-amber-700:hover{background-color:#b45309;}
+
+/* green */
+.bg-green-300{background-color:#86efac;}
+.border-green-300{border-color:#86efac;}
+.bg-green-700{background-color:#15803d;}
+.hover\:bg-green-700:hover{background-color:#15803d;}
+.border-green-500{border-color:var(--color-green-500);}
+.hover\:bg-green-50:hover{background-color:var(--color-green-50);}
+
+/* purple (tickets) */
+.bg-purple-300{background-color:#d8b4fe;}
+.bg-purple-600{background-color:#7c3aed;}
+.hover\:bg-purple-700:hover{background-color:#6d28d9;}
+
+/* gradients (tournament management header) */
+/* Tailwind v4 генерирует градиенты через CSS-переменные --tw-gradient-*.
+   В проекте index.css собран не полностью, поэтому добавляем недостающие классы,
+   чтобы bg-gradient-to-br from-indigo-600 to-purple-700 заработали. */
+.from-indigo-600{--tw-gradient-from:var(--color-indigo-600);--tw-gradient-stops:var(--tw-gradient-via-stops,var(--tw-gradient-position),var(--tw-gradient-from) var(--tw-gradient-from-position),var(--tw-gradient-to) var(--tw-gradient-to-position));}
+.to-purple-700{--tw-gradient-to:var(--color-purple-700);}
+
+/* ring color helpers (Tailwind ring-2 exists, but ring-purple-500 may be missing) */
+.ring-purple-500{--tw-ring-color:var(--color-purple-500);}
+
+/* opacity variants (Tailwind syntax /XX) */
+.bg-white\/15{background-color:rgba(255,255,255,.15);}
+.hover\:bg-white\/20:hover{background-color:rgba(255,255,255,.20);}
+
+/* hover border */
+.hover\:border-blue-200:hover{border-color:var(--color-blue-200);} 
+
+/* red */
+.border-red-300{border-color:#fca5a5;}
+.hover\:bg-red-50:hover{background-color:var(--color-red-50);} 
+
+/* ring colors */
+.ring-purple-500{--tw-ring-color:var(--color-purple-500);} 
+
+/* misc typography/utilities */
+.font-medium{font-weight:500;}
+.font-bold{font-weight:700;}
+.text-gray-900{color:#111827;}
+.text-indigo-100{color:#e0e7ff;}
+.shrink-0{flex-shrink:0;}
+.py-10{padding-block:2.5rem;}
+
+.bg-amber-600\/60{background-color:rgba(217,119,6,.60);}
+.bg-green-600\/60{background-color:rgba(22,163,74,.60);}
+.bg-purple-600\/60{background-color:rgba(124,58,237,.60);}
+
+@media (min-width:1024px){
+  .lg\:col-span-1{grid-column:span 1 / span 1;}
+  .lg\:col-span-2{grid-column:span 2 / span 2;}
+}
+
+/* modal / overlay (утилиты Tailwind отсутствуют в текущей сборке index.css) */
+.fixed{position:fixed;}
+.inset-0{inset:0;}
+.max-w-lg{max-width:32rem;}
+.bg-black\/50{background-color:rgba(0,0,0,.50);}
+.z-\[100\]{z-index:100;}
+
+/* missing common colors used by sponsor layout */
+.bg-amber-100{background-color:#fef3c7;}
+.border-red-300{border-color:#fca5a5;}
+.hover\:bg-red-50:hover{background-color:var(--color-red-50);}
+
+/* missing typography / misc */
+.text-gray-900{color:#111827;}
+.text-indigo-100{color:#e0e7ff;}
+.font-medium{font-weight:500;}
+.font-bold{font-weight:700;}
+.shrink-0{flex-shrink:0;}
+.py-10{padding-top:2.5rem;padding-bottom:2.5rem;}
+
+/* spinner (loader) */
+.aivango-spinner{width:16px;height:16px;border:2px solid rgba(255,255,255,.75);border-top-color:transparent;border-radius:9999px;animation:aivango-spin .8s linear infinite;}
+@keyframes aivango-spin{to{transform:rotate(360deg);}}
+
+/* missing util used in badge fallback */
+.bg-white\/20{background-color:rgba(255,255,255,.20);}
+
+/* header completion summary helpers */
+.border-white\/20{border-color:rgba(255,255,255,.20);}
+.text-white\/90{color:rgba(255,255,255,.90);}

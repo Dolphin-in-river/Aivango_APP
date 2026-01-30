@@ -1,0 +1,86 @@
+/* Layout wrapper */
+.tournaments-wrapper {
+  max-width: 1080px;
+  margin: 2.5rem auto;
+  padding: 0 1rem;
+}
+
+/* Header row (title + buttons) */
+.top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.actions {
+  display: flex;
+  gap: 0.8rem;
+}
+
+/* Simple button styles; re-use for create + logout */
+.btn {
+  background: var(--primary-dark);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background 0.18s;
+}
+
+.btn:hover {
+  background: var(--primary);
+}
+
+.btn.primary {
+  background: var(--primary);
+}
+
+.btn.primary:hover {
+  background: var(--primary-dark);
+}
+
+/* Table wrapper keeps table scrollable on small screens */
+.table-wrap {
+  overflow-x: auto;
+}
+
+.tournament-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.tournament-table th,
+.tournament-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e5e5e5;
+  white-space: nowrap;
+}
+
+.tournament-table th {
+  background: #f7f8fb;
+  text-align: left;
+  font-weight: 600;
+}
+
+.tournament-table tr:last-child td {
+  border-bottom: none;
+}
+
+.error {
+  color: #d93025;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.info {
+  color: #555;
+  text-align: center;
+  margin-top: 1.5rem;
+}

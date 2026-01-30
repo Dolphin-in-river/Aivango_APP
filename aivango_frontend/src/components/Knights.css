@@ -1,0 +1,154 @@
+/* ─────────────────────────────────────────────────────────────
+   Knights (applications) – shared styles
+   Put this file in: src/components/Knights.css
+   ─────────────────────────────────────────────────────────── */
+
+/* ---------- CSS-custom props ---------- */
+:root {
+  /* reuse across buttons/tags etc. tweak as you like */
+  --primary: #1e90ff;
+}
+
+/* ---------- Layout wrappers ---------- */
+.knight-container {
+  max-width: 960px;
+  margin: 2.5rem auto;
+  padding: 0 1rem;
+}
+
+/* ---------- Tournament selector ---------- */
+.knight-container select {
+  margin: 0.5rem 0 1.2rem;
+  padding: 0.45rem 0.75rem;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+/* ---------- Application list ---------- */
+.application-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.application-card {
+  border: 1px solid #e4e4e4;
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+}
+
+.application-card h4 {
+  margin: 0 0 0.3rem;
+  font-size: 1.05rem;
+}
+
+/* ---------- Status tags ---------- */
+.status-tag {
+  padding: 0.15rem 0.55rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.status-OPEN       { background: #eaf4ff; color: #0060c1; }
+.status-ACCEPTED   { background: #e9f8ee; color: #2e7d32; }
+.status-REJECTED   { background: #ffebee; color: #c62828; }
+.status-NEEDS_EDIT { background: #fff8e1; color: #f9a825; }
+
+/* ---------- Generic buttons ---------- */
+.app-btn {
+  padding: 0.45rem 0.9rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: opacity 0.18s;
+  font-size: 0.9rem;
+}
+
+.app-btn.primary   { background: var(--primary); color: #fff; }
+.app-btn.secondary { background: #f5f5f5; }
+
+.app-btn:disabled {
+  opacity: .6;
+  cursor: not-allowed;
+}
+
+/* ---------- Form (knight application) ---------- */
+.tournament-form,
+.modal-window form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin: 1.2rem 0;
+}
+
+.tournament-form input,
+.tournament-form textarea,
+.modal-window textarea {
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  padding: 0.55rem 0.8rem;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.tournament-form textarea,
+.modal-window textarea {
+  resize: vertical;
+}
+
+/* ---------- Error text ---------- */
+.error {
+  color: #c62828;
+  margin-top: 0.2rem;
+  font-size: 0.875rem;
+}
+
+/* ---------- Modal (application review) ---------- */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-window {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.5rem 2rem;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+}
+
+.modal-window h3 {
+  margin-top: 0;
+}
+
+.modal-window textarea {
+  margin: 0.7rem 0 1rem;
+}
+
+.categories-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  columns: 2;
+  column-gap: 1.5rem;
+}
+
+.categories-list li {
+  break-inside: avoid;
+  margin-bottom: 0.4rem;
+}

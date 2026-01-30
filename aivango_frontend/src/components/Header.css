@@ -1,0 +1,165 @@
+.header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.header--dark {
+  background: linear-gradient(90deg, #1e3a8a, #312e81);
+  color: #fff;
+}
+
+.header__main {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 12px 16px;
+
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 24px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.brand img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+
+.brand-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: nowrap;
+}
+
+.nav--center {
+  justify-content: center;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.9;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.nav a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  min-width: 0;
+}
+
+.welcome {
+  opacity: 0.85;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.logoutBtn {
+  width: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.10);
+  color: #fff;
+
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.logoutBtn:hover {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+/* Подменю для /sponsor */
+.header__sub {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 10px 16px 14px;
+
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.roleLabel {
+  opacity: 0.85;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.subLinks {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.subLinks a {
+  color: #fff;
+  opacity: 0.9;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.subLinks a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.userBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  line-height: 1.1;
+}
+
+.roleUnderWelcome {
+  opacity: 0.85;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.brand-title,
+.brand-title:hover,
+.brand-title:focus,
+.brand-title:active,
+.brand-title * {
+  text-decoration: none;
+}
